@@ -1,7 +1,7 @@
 START_TXT = """
 Hello 👋 {mention}
 
-I'm <b>{bot}</b> ✨ an advanced telegram Group management
+I'm <b>{bot}</b> ✨ an advanced telegram Group management bot
 
 I'm here to help you manage your groups! Hit /help to find out more about how to use me to my full potential..!
 
