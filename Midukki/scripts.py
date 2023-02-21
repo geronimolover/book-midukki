@@ -1,17 +1,17 @@
 START_TXT = """
-Hello 👋 {mention} 
+Hello 👋 {mention}
 
 I'm <b>{bot}</b> ✨ an advanced telegram Group management
 
 I'm here to help you manage your groups! Hit /help to find out more about how to use me to my full potential..!
 
-Join <b><a href=http://t.me/Mo_Tech_YT>my news channel</a></b> to get information on all the latest updates
+Join <b><a href=https://t.me/check_this_channel</a></b> to get information on all the latest updates
 """
 
 HELP_TXT = """
 👋 <b>Hello {mention}!</b>
 
-I Can Guide You Through All Of <b>{bot}</b>'s Cool Features And How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules          
+I Can Guide You Through All Of <b>{bot}</b>'s Cool Features And How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules
 
 📚 <u><b>HelpFull Commands</b></u>:
 
@@ -27,18 +27,17 @@ ABOUT_TXT = """
 [{name}](t.me/{username}) Was created on September 4, 2022
 We are currently developing this bot, using only the Pyrogram library.
 
-➾ Developers : Muhammed
+➾ Developers : Geronimo Lover
 ➾ Language : Python3
 ➾ Framework : Pyrogram
 ➾ Database : Mongo db
 """
 
 DONATE_TXT = """
-If you like this project of mine, you can donate by clicking on the given link
+If you like this project of mine, you can donate by blessing me
 
-Dev : [Muhammed](t.me/Pr0fess0r_99)
-Paytm : [Click Here](https://p.paytm.me/xCTH/7yzmtgie)
-  or UPI `motech8129@okaxis`
+Dev : [Muhammed](t.me/geronimo1234)
+
 """
 
 STATUS_TXT = """
@@ -56,16 +55,16 @@ STATUS_TXT = """
 ◉ Tota Files: `{h}`
 ◉ Tota Users: `{i}`
 ◉ Tota Chats: `{j}`
-◉ Used Storage: `{k}` 
+◉ Used Storage: `{k}`
 ◉ Free Storage: `{l}`
-◉ Total Storage: `{m}` 
+◉ Total Storage: `{m}`
 """
 
 AUTO_TXT = """
 **--MODULE OF AUTOFILTER--**
 
-● I Can Provide Files In Your Group, It Very Easy Way Just Add Me Ro Your Group And Make Me Admin In Your Group, Thats All.. I Will Provide Files From Your Group 
-      
+● I Can Provide Files In Your Group, It Very Easy Way Just Add Me Ro Your Group And Make Me Admin In Your Group, Thats All.. I Will Provide Files From Your Group
+
 🔋 **--Usage & Commands--** :
 
 ◉ /autofilter : use to turn on & off
@@ -102,7 +101,7 @@ MANUAL_TXT = """
 CONNECTION_TXT = """
 **--MODULE OF CONNECTIONS**--
 
-● Used to connect bot to PM for managing filters 
+● Used to connect bot to PM for managing filters
 ● it helps to avoid spamming in groups.
 
 🔋 **--NOTE--** :
@@ -131,7 +130,7 @@ INFO_TXT = """
 SPELL_TXT = """
 **--MODULE OF SPELLCHECK--**
 
-● Everything Related To The Spell Check Module When No AutoFilter Result Are Found 
+● Everything Related To The Spell Check Module When No AutoFilter Result Are Found
 
 🔋 **--Commands & Usage--** :
 
@@ -141,7 +140,7 @@ SPELL_TXT = """
 🔋 **--Supporting Vars--** :
 
  • `{mention}` : user profile link
- • `{query}` : request text 
+ • `{query}` : request text
  • `{title}` : get chat title
 
 > Eg:- /setspell Check Your Spelling {query}
@@ -154,14 +153,14 @@ CAP_TXT = """
 
 🔋 **--Commands & Usage--** :
 
-◉ /set_cap : set new file caption 
+◉ /set_cap : set new file caption
 ◉ /del_cap : restart file caption
 
 🔋 **--Supporting Vars--** :
 
  • {mention} : user profile link
  • {file_name} : file name
- • {size} : file size 
+ • {size} : file size
  • {caption} : get original caption
 """
 
@@ -184,7 +183,7 @@ BAN_TXT = """
 
 🔋 **--Commands and Usage**-- :
 
-◉ /ban : ban a user 
+◉ /ban : ban a user
 ◉ /unban : unban the user
 ◉ /tban : Temporarily ban a user. Example time values: 30s = 30 seconds, 4m = 4 minutes, 3h = 3 hours
 """
@@ -214,8 +213,8 @@ ADMIN_PANEL = """
 
 FILE_CAPTION_TXT = """{file_name}"""
 
-SPELLCHECK_TXT = """Hey Mr 
-Check Your Spelling 
+SPELLCHECK_TXT = """Hey Mr
+Check Your Spelling
 """
 
 IMDB_TEMPLATE_TXT = """
