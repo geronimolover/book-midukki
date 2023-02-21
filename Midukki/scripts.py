@@ -15,7 +15,7 @@ I Can Guide You Through All  My Cool Features And How To Properly Use Them. Use 
 
 📚 <u><b>HelpFull Commands</b></u>:
 
-- /start : Starts me! You've probably already used this!.
+- /start : Starts me! You've probably already used this!
 - /help : Sends this message; I'll tell you more about models!
 - /about : Sends this message; I'll tell you more about myself!
 - /donate : Gives you info on how to support me and my creator!
