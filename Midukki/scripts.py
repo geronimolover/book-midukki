@@ -11,7 +11,7 @@ Join <b><a href=https://t.me/check_this_channel</a></b> to get information on al
 HELP_TXT = """
 👋 <b>Hello {mention}!</b>
 
-I Can Guide You Through All Of My Cool Features And How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules
+I Can Guide You Through All  My Cool Features And How To Properly Use Them. Use The Buttons Below To Navigate Through All Of The Modules
 
 📚 <u><b>HelpFull Commands</b></u>:
 
