@@ -1,5 +1,5 @@
 from os import environ
-from random import choice 
+from random import choice
 from pyrogram import filters, enums
 from pyrogram.errors import UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
 from . import Bots, Configs
@@ -29,9 +29,9 @@ async def start_command(client: Midukki_RoboT, message: message()):
     if len(message.command) != 2:
         if environ.get("BOT_PICS"):
             try:
-                await message.reply_photo(photo=choice(Configs.START_PICS), caption=Configs.START_MESSAGE.format(bot=bot_mention, mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.start_buttons), disable_web_page_preview=False)   
+                await message.reply_photo(photo=choice(Configs.START_PICS), caption=Configs.START_MESSAGE.format(bot=bot_mention, mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.start_buttons), disable_web_page_preview=False)
             except Exception as e:
-                await message.reply_photo(photo=choice(Configs.START_PICS), caption=START_TXT.format(bot=bot_mention, mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.start_buttons), disable_web_page_preview=False)     
+                await message.reply_photo(photo=choice(Configs.START_PICS), caption=START_TXT.format(bot=bot_mention, mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.start_buttons), disable_web_page_preview=False)
                 await message.reply(e)
         else:
             try:
@@ -56,7 +56,7 @@ async def start_command(client: Midukki_RoboT, message: message()):
             try:
                 user = await client.get_chat_member(Configs.AUTH_CHANNEL, user_ids)
                 if user.status == enums.ChatMemberStatus.BANNED: # Banned chat member
-                    await message.reply(text="""𝚂𝙾𝚁𝚁𝚈 𝚂𝙸𝚁, 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙱𝙰𝙽𝙽𝙴𝙳 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴""", disable_web_page_preview=True)                  
+                    await message.reply(text="""𝚂𝙾𝚁𝚁𝚈 𝚂𝙸𝚁, 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙱𝙰𝙽𝙽𝙴𝙳 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴""", disable_web_page_preview=True)
                     return
             except UserNotParticipant:
                 FORCES = ["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
@@ -68,9 +68,9 @@ async def start_command(client: Midukki_RoboT, message: message()):
                                     url=invite_link.invite_link
                             )
                     ]
-                ]    
+                ]
                 pr0fess0r_99 = markup()(pr0fess0r_99)
-                await message.reply_photo(photo=choice(FORCES), caption=f"""Hello {message.from_user.mention}. \nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> 𝚃𝙾 <a href="{invite_link.invite_link}">my updates channel</a>.so you do not get the files on here""", reply_markup=pr0fess0r_99)                
+                await message.reply_photo(photo=choice(FORCES), caption=f"""Hello {message.from_user.mention}. \nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> 𝚃𝙾 <a href="{invite_link.invite_link}">my updates channel</a>.so you do not get the files on here""", reply_markup=pr0fess0r_99)
             except FloodWait as x:
                 await asyncio.sleep(x.value)
                 FORCES = ["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
@@ -82,13 +82,13 @@ async def start_command(client: Midukki_RoboT, message: message()):
                                     url=invite_link.invite_link
                             )
                     ]
-                ]    
+                ]
                 pr0fess0r_99 = markup()(pr0fess0r_99)
-                await message.reply_photo(photo=choice(FORCES), caption=f"""Hello {message.from_user.mention}. \nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> 𝚃𝙾 <a href="{invite_link.invite_link}">my updates channel</a>.so you do not get the files on here""", reply_markup=pr0fess0r_99)                    
+                await message.reply_photo(photo=choice(FORCES), caption=f"""Hello {message.from_user.mention}. \nYou Have <a href="{invite_link.invite_link}">Not Subscribed</a> 𝚃𝙾 <a href="{invite_link.invite_link}">my updates channel</a>.so you do not get the files on here""", reply_markup=pr0fess0r_99)
             except UserIsBlocked:
                 pass
             except PeerIdInvalid:
-                pass                
+                pass
 
 
         try:
@@ -112,9 +112,9 @@ async def help_command(client: Midukki_RoboT, message: message()):
     mention = user_mention(message)
     bot_name = Bots.BOT_NAME
     bot_mention = Bots.BOT_MENTION
-    bot_username = Bots.BOT_USERNAME    
+    bot_username = Bots.BOT_USERNAME
     if environ.get("BOT_PICS"):
-        await message.reply_photo(photo=choice(Configs.START_PICS), caption=HELP_TXT.format(bot=bot_mention, mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.help_buttons), disable_web_page_preview=False)    
+        await message.reply_photo(photo=choice(Configs.START_PICS), caption=HELP_TXT.format(bot=bot_mention, mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.help_buttons), disable_web_page_preview=False)
     else:
         await message.reply_text(text=HELP_TXT.format(bot=bot_mention, mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.help_buttons), disable_web_page_preview=True)
 
@@ -122,14 +122,14 @@ async def help_command(client: Midukki_RoboT, message: message()):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         if Configs.LOG_CHANNEL is not None:
            await client.send_message(Configs.LOG_CHANNEL, "Name: {}\nId: `{}`".format(message.from_user.id, message.from_user.mention))
-            
+
 @Midukki_RoboT.on_message(Command.c)
 async def about_command(client: Midukki_RoboT, message: message()):
     mention = user_mention(message)
     bot_name = Bots.BOT_NAME
-    bot_username = Bots.BOT_USERNAME    
+    bot_username = Bots.BOT_USERNAME
     if environ.get("BOT_PICS"):
-        await message.reply_photo(photo=choice(Configs.START_PICS), caption=ABOUT_TXT.format(mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.help_buttons), disable_web_page_preview=False)   
+        await message.reply_photo(photo=choice(Configs.START_PICS), caption=ABOUT_TXT.format(mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.help_buttons), disable_web_page_preview=False)
     else:
         await message.reply_text(text=ABOUT_TXT.format(mention=mention, name=bot_name, username=bot_username), reply_markup=markup()(vars.about_buttons), disable_web_page_preview=True)
 
@@ -137,17 +137,17 @@ async def about_command(client: Midukki_RoboT, message: message()):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         if Configs.LOG_CHANNEL is not None:
            await client.send_message(Configs.LOG_CHANNEL, "Name: {}\nId: `{}`".format(message.from_user.id, message.from_user.mention))
-      
+
 @Midukki_RoboT.on_message(Command.d)
 async def donate_command(client: Midukki_RoboT, message: message()):
     mention = user_mention(message)
     bot_name = Bots.BOT_NAME
-    bot_username = Bots.BOT_USERNAME    
+    bot_username = Bots.BOT_USERNAME
     if environ.get("BOT_PICS"):
-        await message.reply_photo(photo=choice(Configs.START_PICS), caption=DONATE_TXT.format(mention=mention, name=bot_name, username=bot_username), disable_web_page_preview=False)      
+        await message.reply_photo(photo=choice(Configs.START_PICS), caption=DONATE_TXT.format(mention=mention, name=bot_name, username=bot_username), disable_web_page_preview=False)
     else:
         await message.reply_text(text=DONATE_TXT.format(mention=mention, name=bot_name, username=bot_username), disable_web_page_preview=True)
-    await message.reply(f"You can also donate to the person currently running me [Here]({Configs.DONATE_LINKS})")  
+    await message.reply(f"You can also donate to the person currently running me ")  
 
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id, message.from_user.first_name)
@@ -163,7 +163,7 @@ async def broadcast_command(client: Midukki_RoboT, message: message()):
     else:
         await message.delete()
 
-async def send_broadcast(client, message, db, send_msg, temp):    
+async def send_broadcast(client, message, db, send_msg, temp):
     all_users = await db.get_all_users()
     broadcast_msg = message.reply_to_message
     while True:
@@ -179,7 +179,7 @@ async def send_broadcast(client, message, db, send_msg, temp):
     temp.broadcast_ids[broadcast_id] = dict(total = total_users, current = done, failed = failed, success = success)
     async with aiofiles.open('broadcast.txt', 'w') as broadcast_log_file:
         async for user in all_users:
-            sts, msg = await send_msg(user_id = int(user['id']), message = broadcast_msg)            
+            sts, msg = await send_msg(user_id = int(user['id']), message = broadcast_msg)
             if msg is not None:
                 await broadcast_log_file.write(msg)
             if sts == 200:
@@ -196,13 +196,13 @@ async def send_broadcast(client, message, db, send_msg, temp):
     if temp.broadcast_ids.get(broadcast_id):
         temp.broadcast_ids.pop(broadcast_id)
     completed_in = datetime.timedelta(seconds=int(time.time()-start_time))
-    await asyncio.sleep(3)    
+    await asyncio.sleep(3)
     await out.delete()
     if failed == 0:
-        await message.reply_text(text=f"""**📣 𝙱𝚁𝙾𝙰𝙳𝙲𝙰𝚂𝚃 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 𝙸𝙽** - `{completed_in}`\n\n𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂 {total_users}.\n𝚃𝙾𝚃𝙰𝙻 𝙳𝙾𝙽𝙴 {done}, {success} 𝚂𝚄𝙲𝙲𝙴𝚂𝚂 & {failed} 𝙵𝙰𝙸𝙻𝙴𝙳""", quote=True)        
+        await message.reply_text(text=f"""**📣 𝙱𝚁𝙾𝙰𝙳𝙲𝙰𝚂𝚃 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 𝙸𝙽** - `{completed_in}`\n\n𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂 {total_users}.\n𝚃𝙾𝚃𝙰𝙻 𝙳𝙾𝙽𝙴 {done}, {success} 𝚂𝚄𝙲𝙲𝙴𝚂𝚂 & {failed} 𝙵𝙰𝙸𝙻𝙴𝙳""", quote=True)
     else:
         await message.reply_document(document='broadcast.txt', caption=f"""** 📣 𝙱𝚁𝙾𝙰𝙳𝙲𝙰𝚂𝚃 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 𝙸𝙽**- `{completed_in}`\n\n𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂 {total_users}.\n𝚃𝙾𝚃𝙰𝙻 𝙳𝙾𝙽𝙴 {done}, {success} 𝚂𝚄𝙲𝙲𝙴𝚂𝚂 & {failed} 𝙵𝙰𝙸𝙻𝙴𝙳""", quote=True)
     await aiofiles.os.remove('broadcast.txt')
-    
+
 if __name__ == "__main__":
     Midukki_RoboT().run()
