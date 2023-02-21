@@ -36,7 +36,7 @@ We are currently developing this bot, using only the Pyrogram library.
 DONATE_TXT = """
 If you like this project of mine, you can donate by blessing me
 
-Dev : [Geronimo Lover](t.me/geronimo1234)
+Dev: [Geronimo Lover](t.me/geronimo1234)
 
 """
 
