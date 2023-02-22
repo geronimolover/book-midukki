@@ -273,7 +273,7 @@ class vars(object):
             button()
                 (
                     "Updates",
-                        url="https://t.me/Mo_Tech_YT"
+                        url="https://t.me/check_this_channel"
                 )
         ],
         [
@@ -347,7 +347,7 @@ class vars(object):
             button()
                 (
                     "Support",
-                        url="https://t.me/Mo_Tech_YT"
+                        url="https://t.me/check_this_channel"
                 ),
             button()
                 (

@@ -130,7 +130,7 @@
         },
         "SUPPORT_CHAT": {
             "description": "Your Support chat url or Your Link [with https:// or https://t.me/] Don't use @",
-            "value": "https://t.me/Mo_Tech_YT",
+            "value": "https://t.me/check_this_channel",
             "required": false
         }
     },
