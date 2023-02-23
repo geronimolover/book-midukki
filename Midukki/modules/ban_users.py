@@ -63,8 +63,8 @@ async def temp_ban_user(_, message):
     if until_date_val is None:
         await message.reply_text(
             (
-                "Invalid time formate "
-                "expected m, h, or d, getting: {}"
+                "Invalid time specified "
+                "expected m, h, or d, Got it: {}"
             ).format(message.command[1][-1])
         )
         return
