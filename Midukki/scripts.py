@@ -1,11 +1,12 @@
 START_TXT = """
 Hello 👋 {mention}
 
-I'm <b>{bot}</b> ✨ an advanced telegram Group management bot
+I'm <b>{bot}</b> ✨ an advanced Telegram Group management bot
 
-I'm here to help you manage your groups! Hit /help to find out more about how to use me to my full potential..!
+I'm here to help you manage your groups!
+As well as provide you with latest movies
 
-Join <b><a href=https://t.me/check_this_channel</a></b> to get information on all the latest updates
+Hit HELP To Know More!
 """
 
 HELP_TXT = """
@@ -18,14 +19,13 @@ I Can Guide You Through All  My Cool Features And How To Properly Use Them. Use 
 - /start : Starts me! You've probably already used this!
 - /help : Sends this message; I'll tell you more about models!
 - /about : Sends this message; I'll tell you more about myself!
-- /donate : Gives you info on how to support me and my creator!
 
 <b>All commands can be used with the following: [ / ]</b>
 """
 
 ABOUT_TXT = """
-[{name}](t.me/{username}) Was created on September 4, 2022
-We are currently developing this bot, using only the Pyrogram library.
+I Was created on August 29, 2050
+My developers are still striving to improve me.
 
 ➾ Developers : Geronimo Lover
 ➾ Language : Python3
@@ -34,7 +34,7 @@ We are currently developing this bot, using only the Pyrogram library.
 """
 
 DONATE_TXT = """
-If you like this project of mine, you can donate by blessing me
+If you like this project of mine, you can donate by blessing me🥰
 
 Dev: [Geronimo Lover](t.me/geronimo1234)
 
@@ -214,11 +214,12 @@ ADMIN_PANEL = """
 FILE_CAPTION_TXT = """{file_name}"""
 
 SPELLCHECK_TXT = """Hey Mr
+The Requested Movie is not Found
 Check Your Spelling
 """
 
 IMDB_TEMPLATE_TXT = """
-🙋‍♂️ Hey {mention} Your Requested {query} is ready 👍
+🙋‍♂️ Hey {mention} The ` {query} ` is ready 👍
 """
 
 WELCOME_TXT = """
