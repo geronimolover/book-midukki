@@ -2,8 +2,8 @@ import asyncio, time, shutil, psutil, os
 from pyrogram import filters, enums
 from pyrogram.errors import MessageNotModified
 from Midukki.functions.media_details import humanbytes, get_size
-from Midukki.functions.commands import button, markup, message               
-from Midukki.functions.settings import get_settings 
+from Midukki.functions.commands import button, markup, message
+from Midukki.functions.settings import get_settings
 from Midukki.functions.loadings import loading
 from Midukki.database import db, Media
 from Midukki import Configs, Index, Bots
@@ -41,7 +41,7 @@ async def cb_handler(client, query):
 
         elif query.data == "backcb":
             await connections_callback_5(client, query)
-       
+
         elif query.data.startswith("get_file"):
             await get_result_file(client, query)
 
@@ -55,7 +55,7 @@ async def cb_handler(client, query):
             del_all_cancel(client, query)
 
         elif query.data == "delallconfirm":
-            await del_all_confirm(client, query) 
+            await del_all_confirm(client, query)
 
         elif "alertmessage" in query.data:
             await alert_cb(query)
@@ -104,11 +104,11 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
-    
+
     ##====(help)====##
 
     elif cb == "stats_cb":
@@ -118,7 +118,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -130,7 +130,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -142,7 +142,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -154,7 +154,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -166,7 +166,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -178,7 +178,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -190,7 +190,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -202,7 +202,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -214,7 +214,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -226,7 +226,7 @@ async def callback_ui(client, query):
         try:
             await query.message.edit(
                 text=txt,
-                reply_markup=btn 
+                reply_markup=btn
             )
         except MessageNotModified:
             pass
@@ -267,8 +267,8 @@ class vars(object):
         [
             button()
                 (
-                    "Support",
-                        url="https://t.me/+sv5flNs7yew1OTk1"
+                    "Channel",
+                        url="https://t.me/free_movie_channel"
                 ),
             button()
                 (
@@ -279,12 +279,12 @@ class vars(object):
         [
             button()
                 (
-                    "Help",
+                    "😃Help",
                         callback_data="maincb+help_cb"
                 ),
             button()
                 (
-                    "About",
+                    "About😎",
                        callback_data="maincb+about_cb"
                 )
         ]
@@ -309,7 +309,7 @@ class vars(object):
                 "ℹ️IDs", callback_data="maincb+info_cb"
             )
         ],
-        [     
+        [
             button()(
                 "📌Pin", callback_data="maincb+pin_cb"
             ),
@@ -339,32 +339,32 @@ class vars(object):
             ),
             button()(
                 "<= Back", callback_data="maincb+start_cb"
-            )     
+            )
         ]
     ]
     about_buttons = [
         [
             button()
                 (
-                    "Support",
+                    "Updates",
                         url="https://t.me/check_this_channel"
                 ),
             button()
                 (
-                    "Source",
-                        url="https://t.me/+sv5flNs7yew1OTk1"
+                    "Channel",
+                        url="https://t.me/free_movie_channel"
                 )
         ],
         [
             button()
                 (
-                    "Tutorial",
-                        url="https://youtu.be/63K9xkKMBoo"
+                    "Music",
+                        url="https://t.me/song_requestgroup"
                 ),
             button()
                 (
-                    "Insta",
-                        url="https://www.instagram.com/mrk_yt_"
+                    "Book",
+                        url="https://t.me/Thedigital_library"
                 )
         ],
         [
@@ -424,17 +424,17 @@ class vars(object):
 
 class CB:
     def start_cb(client, query):
-        txt = Txt.START_TXT.format(bot=Bots.BOT_MENTION, mention=query.from_user.mention)            
+        txt = Txt.START_TXT.format(bot=Bots.BOT_MENTION, mention=query.from_user.mention)
         btn = markup()(vars.start_buttons)
         return btn, txt
-        
+
     def help_cb(client, query):
         txt = Txt.HELP_TXT.format(bot=Bots.BOT_MENTION, mention=query.from_user.mention)
         btn = markup()(vars.help_buttons)
         return btn, txt
 
     def about_cb(client, query):
-        txt = Txt.ABOUT_TXT.format(bot=Bots.BOT_MENTION, name=Bots.BOT_NAME, username=Bots.BOT_USERNAME, mention=query.from_user.mention)    
+        txt = Txt.ABOUT_TXT.format(bot=Bots.BOT_MENTION, name=Bots.BOT_NAME, username=Bots.BOT_USERNAME, mention=query.from_user.mention)
         btn = markup()(vars.start_emitter_btn)
         return btn, txt
 
@@ -482,7 +482,7 @@ class CB:
         txt = Txt.PIN_TXT
         btn = markup()(vars.help_emitter_btn)
         return btn, txt
-   
+
     def admin_panel(client, query):
         txt = Txt.ADMIN_PANEL
         btn = markup()(vars.help_emitter_btn)
@@ -496,7 +496,7 @@ class CB:
 
 async def stats_cb(client, query):
     # Server
-    currentTime = time.strftime("%Hh%Mm%Ss", time.gmtime(time.time() - Bots.BOT_START_TIME))                    
+    currentTime = time.strftime("%Hh%Mm%Ss", time.gmtime(time.time() - Bots.BOT_START_TIME))
     total, used, free = shutil.disk_usage(".")
     total = humanbytes(total)
     used = humanbytes(used)
