@@ -14,7 +14,7 @@ def who_is_creator(id1, id2):
    f"\nBot Deployed By {id1.first_name}"
   )
   return text
-    
+
 class Accounts(object):
     API_ID = int(environ.get("API_ID", 0))
     API_HASH = environ.get("API_HASH")
@@ -41,7 +41,7 @@ class Configs(object):
     # admins id
     ADMINS_ID = [int(admin) if find.search(admin) else admin for admin in environ.get('ADMINS_ID', '5601313788').split()]
 
-    # bot information   
+    # bot information
     COMMAND_PREFIXES = environ.get("COMMAND_PREFIXES", "/")
     if environ.get("BOT_PICS"):
         START_PICS = (environ.get("BOT_PICS", "https://telegra.ph/file/5ad2c57ae74bafb6efec1.jpg")).split()
@@ -73,19 +73,19 @@ class Configs(object):
     WEB_API = environ.get("ADS_WEB_API")
 
     # other
-    DONATE_LINKS = environ.get("DONATION_LINK", "https://p.paytm.me/xCTH/7yzmtgie")
+    DONATE_LINKS = environ.get("DONATION_LINK", "https://t.me/free_music123")
     LOADING_SYMBOL = bool(environ.get("LOADING_MODE", True))
     LOADING_A = environ.get("LOADING_SYMBOL_A", "⚪️")
     LOADING_B = environ.get("LOADING_SYMBOL_B", "⚫️")
     STOP_BOT = bool(environ.get("DEFAULT", False))
     PORT_CODE = environ.get("PORT", "8080")
-    broadcast_ids = {} # don't change this..!!  
+    broadcast_ids = {} # don't change this..!!
 
 class Index(object):
     CURRENT = int(environ.get("SKIP", 2))
     CANCEL = False
 
-# bot management 
+# bot management
 async def bot_run():
     _app = web.Application(client_max_size=30000000)
     _app.add_routes(routes)
